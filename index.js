@@ -9,3 +9,7 @@ readdirSync("./routes").map((file)=>app.use("/",require("./routes/"+file)))
 app.get('/', (req, res) => {
   res.send('Main page')
 })
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})

@@ -12,9 +12,6 @@ router.get("/andijon",(req,res)=>{
     axios.get('https://ishapi.mehnat.uz/api/v1/vacancies?page=1&per_page=20&sort_key=created_at&company_soato_code=1703',{ httpsAgent })
     .then(function (response) {
         res.send(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
       });
 })
 module.exports = router

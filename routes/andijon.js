@@ -9,7 +9,7 @@ rootCas.addFile(path.resolve('cer','intermediate.pem'));
 const httpsAgent = new https.Agent({ca: rootCas});
 
 router.get("/andijon",(req,res)=>{
-    axios.get('https://ishapi.mehnat.uz/api/v1/vacancies?page=1&per_page=20&sort_key=created_at&company_soato_code=1703',{ httpsAgent })
+    axios.get('https://ishapi.mehnat.uz/api/v1/vacancies',{ httpsAgent })
     .then(function (response) {
         res.send(response.data);
       });

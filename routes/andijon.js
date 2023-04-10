@@ -5,7 +5,7 @@ const path = require('path');
 const https = require('https');
 const rootCas = require('ssl-root-cas').create();
 
-rootCas.addFile(path.resolve('cer','intermediate.pem'));
+rootCas.addFile(path.resolve('../cer/intermediate.pem'));
 const httpsAgent = new https.Agent({ca: rootCas});
 
 router.get("/andijon",(req,res)=>{
